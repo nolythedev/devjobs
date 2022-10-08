@@ -1,0 +1,34 @@
+<div class="container">
+
+</div>
+
+<mat-grid-list cols="3">
+    <mat-grid-tile *ngFor="let job of jobs">
+        <div class="job-container">
+            <div class="logo-container" [ngStyle]="{'background-color': job.logoBackground}">
+                <img src="{{job.logo}}" alt="logo">
+            </div>
+
+            <div class="information">
+                <div class="subtext">
+                    <p>{{job.postedAt}}</p>
+                    <p class="dot">&nbsp;&bull;</p>
+                    <p>{{job.contract}}</p>
+                </div>
+            </div>
+
+            <div class="job-information">
+                <h1>{{job.position}}</h1>
+                <p>{{job.company}}</p>
+            </div>
+
+            <div class="location">
+                <h2>{{job.location}}</h2>
+            </div>
+
+        </div>
+
+
+    </mat-grid-tile>
+
+</mat-grid-list>

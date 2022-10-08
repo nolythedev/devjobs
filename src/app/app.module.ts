@@ -9,12 +9,16 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { SearchComponent } from './search/search.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { JobsComponent } from './jobs/jobs.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    JobsComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,9 @@ import {MatInputModule} from '@angular/material/input';
     BrowserAnimationsModule,
     MatSlideToggleModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatGridListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
