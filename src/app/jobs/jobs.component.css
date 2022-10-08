@@ -15,12 +15,12 @@
 }
 
 .job-container h1:hover {
-   color: #6E8098;
-   cursor: pointer;
- 
+    color: #6E8098;
+    cursor: pointer;
+
 }
 
-mat-grid-tile:last-child {
+mat-grid-tile:nth-child(3n+3) .job-container {
     margin-right: 0 !important;
 }
 
@@ -62,7 +62,7 @@ mat-grid-tile:last-child {
 }
 
 .location h2 {
-    color:#5964E0;
+    color: #5964E0;
     font-weight: 500;
     font-size: 14px;
     margin-top: 30px;
