@@ -1,20 +1,19 @@
-.container {
-    width: 1100px;
+md-grid-list {
     display: flex;
-    flex: row;
     flex-wrap: wrap;
-}
+    justify-content: center;
+  }
 
 .job-container {
-    width: 350%;
+    width: 350px;
     height: 228px;
     border-radius: 6px;
     background-color: #ffffff;
-    margin: 0 30px 40px 0;
+    margin: 0;
     padding-left: 32px;
 }
 
-.job-container h1:hover {
+.job-container a:hover {
     color: #6E8098;
     cursor: pointer;
 
@@ -49,7 +48,9 @@ mat-grid-tile:nth-child(3n+3) .job-container {
     margin-right: 5px;
 }
 
-.job-information h1 {
+
+.job-information a {
+    text-decoration: none;
     font-size: 20px;
     font-weight: 500;
     color: #19202D;
@@ -59,6 +60,7 @@ mat-grid-tile:nth-child(3n+3) .job-container {
     color: #6E8098;
     font-weight: 200;
     font-size: 16px;
+    margin-top: 17px;
 }
 
 .location h2 {

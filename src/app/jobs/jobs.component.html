@@ -1,9 +1,6 @@
-<div class="container">
 
-</div>
-
-<mat-grid-list cols="3">
-    <mat-grid-tile *ngFor="let job of jobs">
+<mat-grid-list cols="3" rowHeight="300" [gutterSize]="'1px'">
+    <mat-grid-tile *ngFor="let job of jobs" [colspan]="1" [rowspan]="1" >
         <div class="job-container">
             <div class="logo-container" [ngStyle]="{'background-color': job.logoBackground}">
                 <img src="{{job.logo}}" alt="logo">
@@ -18,7 +15,7 @@
             </div>
 
             <div class="job-information">
-                <h1>{{job.position}}</h1>
+                <a  [routerLink]="['/details', job.id]">{{job.position}}</a>
                 <p>{{job.company}}</p>
             </div>
 
@@ -29,3 +26,4 @@
     </mat-grid-tile>
 
 </mat-grid-list>
+

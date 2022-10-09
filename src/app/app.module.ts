@@ -12,13 +12,16 @@ import {MatInputModule} from '@angular/material/input';
 import { JobsComponent } from './jobs/jobs.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
+import { JobDetailsComponent } from './job-details/job-details.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SearchComponent,
-    JobsComponent
+    JobsComponent,
+    JobDetailsComponent
   ],
   imports: [
     BrowserModule,
