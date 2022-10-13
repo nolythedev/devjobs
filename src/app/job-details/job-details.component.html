@@ -1,1 +1,70 @@
-<p>job-details works!</p>
+<div class="container" *ngIf="job">
+
+    <div class="header">
+        <div class="company">
+            <div class="logo" [ngStyle]="{'background-color': job.logoBackground}">
+                <img src="{{job.logo}}" alt="{{job.company}}">
+            </div>
+            <div class="information">
+                <h1>{{job.company}}</h1>
+                <p>{{job.company | lowercase }}.com</p>
+            </div>
+        </div>
+        <a href="{{job.website}}"><button>Company Site</button></a>
+    </div>
+
+    <div class="detail-container">
+        <div class="inner">
+            <div class="yeah">
+                <div class="job-information">
+                    <div class="subtext">
+                        <p>{{job.postedAt}}</p>
+                        <p class="dot">&nbsp;&bull;</p>
+                        <p>{{job.contract}}</p>
+                    </div>
+                    <h1>{{job.position}}</h1>
+                    <p>{{job.location}}</p>
+                </div>
+                <button>Apply Now</button>
+            </div>
+
+            <div class="description">
+                <p>{{job.description}}</p>
+            </div>
+
+            <h2>Requirements</h2>
+            
+            <div class="description">
+                <p>{{job.requirements.content}}</p>
+            </div>
+
+            <div class="description" >
+                <ul *ngFor="let item of job.requirements.items">
+                    <li>{{item}}</li>
+                </ul>
+            </div>
+
+            <h2>What You Will Do </h2>
+
+            <div class="description">
+                <p>{{job.role.content}}</p>
+            </div>
+            
+            <div class="description" >
+                <ul *ngFor="let item of job.role.items">
+                    <li>{{item}}</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+     
+        <div class="info">
+            <h3>{{job.position}}</h3>
+            <p>{{job.company}}</p>
+        </div>
+        <button>Apply Now</button>
+    </footer>
+</div>

@@ -3,7 +3,7 @@
     <mat-grid-tile *ngFor="let job of jobs" [colspan]="1" [rowspan]="1" >
         <div class="job-container">
             <div class="logo-container" [ngStyle]="{'background-color': job.logoBackground}">
-                <img src="{{job.logo}}" alt="logo">
+                <img src="{{job.logo}}" alt="{{job.company}}">
             </div>
 
             <div class="information">
